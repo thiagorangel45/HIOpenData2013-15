@@ -15,5 +15,31 @@ wget https://raw.githubusercontent.com/cms-opendata-validation/HeavyIonDataValid
 
 ```
 
+### Running the script:
+
+Running the python script:
+
+```
+cmsRun runForest_pPb_DATA_53X_OD.py
+```
   
+We got some erros and processing messages, but it works and produce a ROOT file named: HiForest.root, this root file is avaiable in this repository inside the test folder and you can download only the root file if you want and check the Trees and Branches, everything should work fine for Jets until now.
+
+### Problem with the Muon Tree
+
+Since our analysis is focused on the muon channel, we attempted to include the muon tree by uncommenting line 234 in the runForest_pPb_DATA_53X_OD.py file and rerunning the code in the same manner as before. However, we encountered an issue where the muon tree remains empty, while the other trees continue to function correctly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
