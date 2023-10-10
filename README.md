@@ -8,7 +8,7 @@ We will use a Docker container to perform this analysis. You can download Docker
   docker run -it --name hi2013_od -P -p 5901:5901 -p 6080:6080 -v ${HOME}/hi2013_od:/code/hi2013_od gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_5_3_20-slc6_amd64_gcc472 /bin/bash
   ```
 
-Once the container is downloaded, you will see the folders in this repository. When you go into the 'test' folder: [test](HeavyIonsAnalysis/JetAnalysis/test) you will find some Python scripts. However, we will download another script using the following command (actually, it's not a different script; it's just a simple modification of 'runForest_pPb_Data_53X.py':
+Once the container is downloaded, you will see the folders in this repository. When you go into the 'test' folder: [test](HeavyIonsAnalysis/JetAnalysis/test) you will find some Python scripts. However, we will download another script using the following command (actually, it's not a different script; it's just a simple modification of `runForest_pPb_Data_53X.py`:
 
 ```
 wget https://raw.githubusercontent.com/cms-opendata-validation/HeavyIonDataValidation/53X/runForest_pPb_DATA_53X_OD.py
@@ -28,7 +28,7 @@ You will receive some error and processing messages, but it will work and produc
 ### Problem with the Muon Tree
 
 Problem with the Muon Tree:
-As our analysis focuses on the muon channel, we attempted to include the muon tree by uncommenting line 234 in the 'runForest_pPb_DATA_53X_OD.py' file and rerunning the code as before. However, we encountered an issue where the muon tree remains empty, while the other trees continue to function correctly.
+As our analysis focuses on the muon channel, we attempted to include the muon tree by uncommenting line 234 in the `runForest_pPb_DATA_53X_OD.py` file and rerunning the code as before. However, we encountered an issue where the muon tree remains empty, while the other trees continue to function correctly.
 
 The ROOT output is available in [HiForest.root](HeavyIonsAnalysis). You can download and open it with the TBrowser in ROOT to check.
 
