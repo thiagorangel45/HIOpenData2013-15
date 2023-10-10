@@ -1,12 +1,8 @@
-# HiOpenData2013
+## Instructions
 
-Este repositório hospeda um conjunto de exemplos simples que usam CMSSW EDAnalyzers para extrair informações de Triggers e produzir um arquivo ROOT chamado HiForest a partir de dados públicos de íons pesados ​​​​do CMS que foram tomados no ano de 2010. Aqui terá algumas instruções de como rodar esses códigos e reproduzir a análise do espectro de dois múons.
+### Preparing the container:
 
-## Instruções 
-
-### Preparando o Container
-
-Para realizar essa análise, utilizaremos o [Docker container](http://opendata.cern.ch/docs/cms-guide-docker), para isso faça o download do docker que pode ser visto no link anterior e após o download, copie e cole o seguinte comando no terminal do seu computador:
+We will use the docker container to do this analysis, you can download the docker in this link [Docker container](https://www.docker.com/products/docker-desktop/). 
 
   ```
   docker run --name hi2010_od -it  gitlab-registry.cern.ch/cms-cloud/cmssw-docker/cmssw_3_9_2_patch5-slc5_amd64_gcc434:latest /bin/bash
