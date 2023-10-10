@@ -9,8 +9,7 @@ We will use a Docker container to perform this analysis. You can download the Do
   ```
   docker run --name hi2015_od -it gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_7_5_8_patch3-slc6_amd64_gcc491
   ```
-
-Once the container is downloaded, you will see the folders in this repository. going into the test folder: [test](HeavyIonsAnalysis/JetAnalysis/test) you will see some python scripts, but we will download another one by the following command (actually it is not another one it is just a simple modification from the `runForestAOD_pp_Data_75X.py`:
+Once the container is downloaded, you will see the folders in this repository. If you navigate to the [test](HeavyIonsAnalysis/JetAnalysis/test) folder, you will find some Python scripts. However, we need to download an additional one (in reality, it's not a different script, but a simple modification of `runForestAOD_pp_Data_75X.py`) using the following command:
 
 ```
 wget https://raw.githubusercontent.com/cms-opendata-validation/HeavyIonDataValidation/75X/runForestAOD_pp_DATA_75X_OD.py
@@ -24,11 +23,14 @@ Running the python script:
 ```
 cmsRun runForestAOD_pp_DATA_75X_OD.py
 ```
+
+You will encounter some errors and processing messages, but the script will work and produce a ROOT file named `HiForest.root` This ROOT file is available in this repository inside the [test](HeavyIonsAnalysis/JetAnalysis/test) folder. You can choose to download only the ROOT file if you wish to inspect the Trees and Branches. Everything should work fine for Jets up to this point.
   
-We got some erros and processing messages, but it works and produce a ROOT file named: HiForest.root, this root file is avaiable in this repository inside the test folder and you can download only the root file if you want and check the Trees and Branches, everything should work fine for Jets until now.
 
 ### Problem with the Muon Tree
 
-Since our analysis is focused on the muon channel, we attempted to include the muon tree by uncommenting line 194 in the `runForestAOD_pp_DATA_75X_OD.py` file and rerunning the code in the same manner as before. However, we encountered an issue where the muon tree remains empty just like the 2013 case, while the other trees continue to function correctly.
+As our analysis focuses on the muon channel, we attempted to include the muon tree by uncommenting line 194 from the `runForestAOD_pp_DATA_75X_OD.py` file and rerunning the code in the same manner as we did from the 2013 case. However, we encountered an issue where the muon tree remains empty, similar to the 2013 case, while the other trees continue to function correctly.
 
-The root output is avaiable in: [HiForest.root](HeavyIonsAnalysis).You can download and open it with the `TBrowser` on root to check.
+The ROOT output is available in [HiForest.root](HeavyIonsAnalysis) You can download and open it with the `TBrowser` in ROOT to examine it."
+
+
