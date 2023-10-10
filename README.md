@@ -29,8 +29,8 @@ You will encounter some errors and processing messages, but the script will work
 
 ### Problem with the Muon Tree
 
-As our analysis focuses on the muon channel, we attempted to include the muon tree by uncommenting line 194 from the `runForestAOD_pp_DATA_75X_OD.py` file and rerunning the code in the same manner as we did from the 2013 case. However, we encountered an issue where the muon tree remains empty, similar to the 2013 case, while the other trees continue to function correctly.
+As our analysis focuses on the muon channel, we attempted to include the muon tree by uncommenting line 194 from the `runForestAOD_pp_DATA_75X_OD.py` file and rerunning the code in the same manner as we did from the 2013 case. However, we encountered an issue where the object has no attribute `hltMuTree`. I even tryed to see if the spelling but it is not the problem. 
 
-The ROOT output is available in [HiForest.root](HeavyIonsAnalysis) You can download and open it with the `TBrowser` in ROOT to examine it."
+The ROOT output is available in [HiForest.root](HeavyIonsAnalysis) You can download and open it with the `TBrowser` in ROOT to examine it (just for the Jets)."
 
 
